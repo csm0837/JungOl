@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 
-public class test02 {
+public class test03 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -17,13 +17,6 @@ public class test02 {
 
         int a = Integer.parseInt(tok.nextToken());
 
-        if (a == 0) {
-            System.out.println("zero");
-        } else if (a > 0) {
-            System.out.println("plus");
-        } else {
-            System.out.println("minus");
-
-        }
+        System.out.println((a%400)==0 ||((a%4==0)&&(a%100!=0))? "leap year":"common year");
     }
 }

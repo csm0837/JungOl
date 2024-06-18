@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 
-public class test03 {
+public class test04 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -15,8 +15,26 @@ public class test03 {
         StringTokenizer tok = new StringTokenizer(str);
 
 
-        int a = Integer.parseInt(tok.nextToken());
+        String a = tok.nextToken();
+        int b = Integer.parseInt(tok.nextToken());
 
-        System.out.println((a%400)==0 ||((a%4==0)&&(a%100!=0))? "leap year":"common year");
+        switch (b) {
+
+            case 1:
+                System.out.println("dog");
+                break;
+
+            case 2:
+                System.out.println("cat");
+                break;
+
+            case 3:
+                System.out.println("chick");
+                break;
+
+            default:
+                System.out.println("I don't know");
+
+        }
     }
 }
