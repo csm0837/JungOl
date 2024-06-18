@@ -1,30 +1,27 @@
 package Part4_debugging;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.io.StringReader;
+import java.util.StringTokenizer;
 
-//디버깅 - 연습문제1 #9027//
-public class practice01 {
-    public static void main(String[] args) throws IOException {
+//디버깅 - 연습문제2 #9028//
+public class practice02 {
+    public static void main(String[] args) throws  IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
 
         StringTokenizer st = new StringTokenizer(str);
 
-        String a =st.nextToken();
-        String b =st.nextToken();
+        String a = st.nextToken();
+        int aa = Integer.parseInt(a);
 
-        double aa = Double.parseDouble(a);
-        double bb = Double.parseDouble(b);
+        int x = 4;
+        float y = 4.0f;
 
-        int result1 = (int)(aa+bb); //실수의 합을 정수로 변환
-
-        int aaa = (int)aa;
-        int bbb = (int)bb;
-        int result2 = aaa + bbb;
-
-        System.out.println(result1+" "+result2);
+        System.out.println(aa + " / "+ x +" = " +(int)aa/x);
+        System.out.println(aa + " / "+ y +" = " +(float)aa/y );
 
     }
 

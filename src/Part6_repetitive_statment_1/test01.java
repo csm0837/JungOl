@@ -1,4 +1,4 @@
-package Part5_selection_statment;
+package Part6_repetitive_statment_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 
-public class test02 {
+public class test01 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -14,16 +14,13 @@ public class test02 {
 
         StringTokenizer tok = new StringTokenizer(str);
 
+        String a = tok.nextToken();
+        int b= Integer.parseInt(a);
+        int i =1;
 
-        int a = Integer.parseInt(tok.nextToken());
-
-        if (a == 0) {
-            System.out.println("zero");
-        } else if (a > 0) {
-            System.out.println("plus");
-        } else {
-            System.out.println("minus");
-
+        while(i<b+1){
+            System.out.print(i+" ");
+            i+=1;
         }
     }
 }

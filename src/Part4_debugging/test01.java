@@ -1,42 +1,32 @@
 package Part4_debugging;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
 
-//디버깅 - 자가진단2 #527//
-public class self_test02 {
-    public static void main(String[] args) {
-        test02();
+//디버깅 - 형성평가1 #116//
+public class test01 {
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String str = br.readLine();
+
+        StringTokenizer st= new StringTokenizer(str);
+
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        int c = Integer.parseInt(st.nextToken());
+
+        float d = (a+b+c) / 3.0f;
+
+        String result = String.format("%.1f",d);
+
+        System.out.print(result);
+
+
     }
-
-
-    //디버깅 자가진단1 #526//
-    public static void test01(){
-
-        Scanner scan = new Scanner(System.in);
-
-        double a = scan.nextDouble();
-        double b = scan.nextDouble();
-
-        int c = (int) a;
-        int d = (int) b;
-        int e = (int) ((double) a*b);
-
-        System.out.println(e + " "+ c*d);
-    }
-
-    //디버깅 자가진단2 #527//
-    public static void test02() {
-        Scanner scan = new Scanner((System.in));
-
-        int a = scan.nextInt(); // 1번째 입력값을 받아온다
-        int b = scan.nextInt();  //2번째 입력값을 받아온다
-        double c = (double)a/b; //a를 실수로 변환하고 b로 나눈다
-        String d = String.format("%.2f",c);
-
-        System.out.println(a/b+" "+d);
-    }
-
 
 }
